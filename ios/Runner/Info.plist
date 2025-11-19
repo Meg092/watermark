@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Water Markly</string>
+	<string>GSA CAP</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>water_markly</string>
+	<string>GSA CAP</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -23,6 +25,20 @@
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Please grant camera permissions to take photos and videos with watermarks.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Please authorize location information before it can be added to your photos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please authorize location information before it can be added to your photos.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please authorize the microphone to record video with audio.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please authorize the photo library to view and save your photos and videos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please authorize the photo library to view and manage your photos and videos.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -41,21 +57,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>This app needs camera access to take photos and videos with watermarks</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This app needs microphone access to record videos with audio</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app needs photo library access to view and manage your photos and videos</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>This app needs permission to save photos and videos to your library</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app needs location access to add location information to your photos</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This app needs location access to add location information to your photos</string>
 </dict>
 </plist>

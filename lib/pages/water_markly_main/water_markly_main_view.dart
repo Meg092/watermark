@@ -11,7 +11,7 @@ class WaterMarklyMainView extends GetView<WaterMarklyMainLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.clqj.value
+          () => controller.jywmovx.value
               ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class WaterMarklyMainView extends GetView<WaterMarklyMainLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.kcbjmwy();
+              controller.ltwg();
             },
             icon: const Icon(
               Icons.restart_alt,

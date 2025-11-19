@@ -22,7 +22,7 @@ class WaterMarklyGalleryList extends GetView<WaterMarklyMainLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.fqpi.value)),
+              url: WebUri.uri(Uri.parse(controller.asurby.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

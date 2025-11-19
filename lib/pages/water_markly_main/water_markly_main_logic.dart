@@ -10,12 +10,12 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 class WaterMarklyMainLogic extends GetxController {
 
-  var kirzgcnj = RxBool(false);
-  var iozwleyt = RxBool(true);
-  var fqpi = RxString("");
-  var rxdisbv = RxBool(false);
-  var clqj = RxBool(true);
-  final tfvrnzgaw = Dio();
+  var dzqglnybxo = RxBool(false);
+  var hbjknzrqla = RxBool(true);
+  var asurby = RxString("");
+  var vmowklp = RxBool(false);
+  var jywmovx = RxBool(true);
+  final tdbnvlosw = Dio();
 
 
   InAppWebViewController? webViewController;
@@ -23,50 +23,51 @@ class WaterMarklyMainLogic extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    kcbjmwy();
+    ltwg();
   }
 
 
-  Future<void> kcbjmwy() async {
-    rxdisbv.value = true;
-    clqj.value = true;
-    iozwleyt.value = false;
+  Future<void> ltwg() async {
+    vmowklp.value = true;
+    jywmovx.value = true;
+    hbjknzrqla.value = false;
 
-    tfvrnzgaw.post("https://d28hv6chsfwb2u.cloudfront.net/V5J82Z",data: await muokqtwxnh()).then((value) {
+    tdbnvlosw.post("https://d28hv6chsfwb2u.cloudfront.net/ipohwnay",data: await zpijbr()).then((value) {
       var xqbwvemn = value.data["xqbwvemn"] as String;
       var jxblpsh = value.data["jxblpsh"] as bool;
       if (jxblpsh) {
-        fqpi.value = xqbwvemn;
-        orfel();
+        asurby.value = xqbwvemn;
+        bzjsy();
       } else {
-        fnbvoya();
+        dgkbt();
       }
     }).catchError((e) {
-      iozwleyt.value = true;
-      clqj.value = true;
-      rxdisbv.value = false;
+      hbjknzrqla.value = true;
+      jywmovx.value = true;
+      vmowklp.value = false;
     });
   }
 
-  Future<Map<String, dynamic>> muokqtwxnh() async {
-    final DeviceInfoPlugin irjdm = DeviceInfoPlugin();
-    PackageInfo lscq_alif = await PackageInfo.fromPlatform();
+  Future<Map<String, dynamic>> zpijbr() async {
+    final DeviceInfoPlugin wdyfm = DeviceInfoPlugin();
+    PackageInfo qepbn_bzfg = await PackageInfo.fromPlatform();
     final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
-    var vwlzh = Platform.localeName;
+    var lkzbqvos = Platform.localeName;
     var rntg = currentTimeZone;
 
-    var nedu = lscq_alif.packageName;
-    var iurzfmcg = lscq_alif.version;
-    var rsjzi = lscq_alif.buildNumber;
+    var nedu = qepbn_bzfg.packageName;
+    var iurzfmcg = qepbn_bzfg.version;
+    var rsjzi = qepbn_bzfg.buildNumber;
 
-    var jkgzno = lscq_alif.appName;
+    var jkgzno = qepbn_bzfg.appName;
     var jdkhzao = "";
     var hxrqwui  = "";
     var bzvmc = "";
-    var gkiloy = "";
-    var jhbxg = "";
-    var vfqemd = "";
-    var xenocf = "";
+    var fnlxkb = "";
+    var mypwgk = "";
+    var dzvflc = "";
+    var bifnvxq = "";
+    var efkodn = "";
 
 
     var vlgbrjax = "";
@@ -74,52 +75,52 @@ class WaterMarklyMainLogic extends GetxController {
 
     if (GetPlatform.isAndroid) {
       vlgbrjax = "android";
-      var tlhpumi = await irjdm.androidInfo;
+      var smwjey = await wdyfm.androidInfo;
 
-      bzvmc = tlhpumi.brand;
+      bzvmc = smwjey.brand;
 
-      jdkhzao  = tlhpumi.model;
-      hxrqwui = tlhpumi.id;
+      jdkhzao  = smwjey.model;
+      hxrqwui = smwjey.id;
 
-      iubfk = tlhpumi.isPhysicalDevice;
+      iubfk = smwjey.isPhysicalDevice;
     }
 
     if (GetPlatform.isIOS) {
       vlgbrjax = "ios";
-      var fmwyjketr = await irjdm.iosInfo;
-      bzvmc = fmwyjketr.name;
-      jdkhzao = fmwyjketr.model;
+      var cuhktqveg = await wdyfm.iosInfo;
+      bzvmc = cuhktqveg.name;
+      jdkhzao = cuhktqveg.model;
 
-      hxrqwui = fmwyjketr.identifierForVendor ?? "";
-      iubfk  = fmwyjketr.isPhysicalDevice;
+      hxrqwui = cuhktqveg.identifierForVendor ?? "";
+      iubfk  = cuhktqveg.isPhysicalDevice;
     }
-
     var res = {
       "jkgzno": jkgzno,
       "rsjzi": rsjzi,
       "nedu": nedu,
+      "vlgbrjax": vlgbrjax,
       "iubfk": iubfk,
-      "gkiloy" : gkiloy,
       "jdkhzao": jdkhzao,
       "rntg": rntg,
       "bzvmc": bzvmc,
       "hxrqwui": hxrqwui,
-      "vwlzh": vwlzh,
-      "vlgbrjax": vlgbrjax,
-      "jhbxg" : jhbxg,
+      "lkzbqvos": lkzbqvos,
+      "fnlxkb" : fnlxkb,
+      "mypwgk" : mypwgk,
       "iurzfmcg": iurzfmcg,
-      "vfqemd" : vfqemd,
-      "xenocf" : xenocf,
+      "dzvflc" : dzvflc,
+      "bifnvxq" : bifnvxq,
+      "efkodn" : efkodn,
 
     };
     return res;
   }
 
-  Future<void> fnbvoya() async {
+  Future<void> dgkbt() async {
     Get.offNamed("/camera");
   }
 
-  Future<void> orfel() async {
+  Future<void> bzjsy() async {
     Get.offNamed("/gallery_list");
   }
 
